@@ -1,0 +1,84 @@
+{
+    "seller":{
+        "name":"個人賣場",
+        "description":"uber eat專送",
+        "deliveryTime":30,
+        "score":4.2,
+        "serviceScore":4.1,
+        "foodScore":4.3,
+        "rankRate":69.2,
+        "minPrice":20,
+        "deliveryPrice":4,
+        "ratingCount":24,
+        "sellCount":90,
+        "bulletin":"賣場介紹，什麼都賣什麼都不奇怪",
+        "supports":[
+            {
+                "type": 0,
+                "description": "優惠訊息"
+            },
+            {
+                "type": 1,
+                "description": "娃娃九折"
+            },
+            {
+                "type": 2,
+                "description": "滿千送百"
+            }
+        ],
+        "avator":"https://picsum.photos/seed/picsum/256/256",
+        "pics":[
+            "https://picsum.photos/seed/picsum/180/180",
+            "https://picsum.photos/seed/picsum/180/180",
+            "https://picsum.photos/seed/picsum/180/180",
+            "https://picsum.photos/seed/picsum/180/180"
+        ],
+        "infos":[
+            "該商家可開立發票，下單前先寫好發票抬頭",
+            "品類：娃娃",
+            "地址：台中市",
+            "營業時間：週一～週日 24hr"
+        ]
+    },
+    "goods":[
+        {
+            "name":"熱銷榜",
+            "type": -1,
+            "foods":[
+                {
+                    "name":"老皮玩偶",
+                    "price":100,
+                    "oldPrice":"",
+                    "description":"玩偶",
+                    "sellCount": 229,
+                    "rating": 100,
+                    "info": "柔軟舒服",
+                    "ratings":[
+                        {
+                            "username":"3*******c",
+                            "rateTime":1469281964000,
+                            "rateType":0,
+                            "text":"出貨速度快",
+                            "avatar":"https://picsum.photos/seed/picsum/256/256"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "ratings":[
+        {
+            "username":"3*******c",
+            "rateTime":1469281964000,
+            "deliveryTime": 30,
+            "score": 5,
+            "rateType": 0,
+            "text": "出貨速度快",
+            "avatar":"https://picsum.photos/seed/picsum/256/256",
+            "recommend":[
+                "老皮玩偶",
+                "三麗鷗玩偶"
+            ]
+        }
+    ]
+}

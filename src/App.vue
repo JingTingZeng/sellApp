@@ -1,32 +1,42 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <v-header v-bind:seller="seller"/>
+    <div class="tab border-1px">
+      <div class="tab-item">
+        <router-link to="/product">商品</router-link>
+      </div>
+      <div class="tab-item">
+        <router-link to="/ratings">評論</router-link>
+      </div>
+      <div class="tab-item">
+        <router-link to="/seller">商家</router-link>
+      </div>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { mapState,mapActions } from 'vuex';
+import VHeader from '@/views/layout/header'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  components:{
+    VHeader
+  },
+  data(){
+    return{
     }
+  },
+  computed: {
+    ...mapState(['seller'])
+  },
+  methods:{
+    ...mapActions(['getSeller'])
+  },
+  async created(){
+    await this.getSeller();
   }
 }
-</style>
+</script>
+
