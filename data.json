@@ -42,7 +42,7 @@
     },
     "goods": [
         {
-        "name": "熱销榜",
+        "name": "熱銷榜",
         "type": -1,
         "foods": [
         {
@@ -52,13 +52,13 @@
             "description": "鹹粥",
             "sellCount": 229,
             "rating": 100,
-            "info": "一碗皮蛋瘦肉粥，总是我到粥店时的不二之选。香浓软滑，饱腹暖心，皮蛋的Q弹与瘦肉的滑嫩伴着粥香溢于满口，让人喝这样的一碗粥也觉得心满意足",
+            "info": "一碗皮蛋瘦肉粥，總是我到粥店時的不二之選。香濃軟滑，飽腹暖心，皮蛋的Q彈與瘦肉的滑嫩伴着粥香溢於满口，讓人喝這樣的一碗粥也覺得心满意足",
             "ratings": [
             {
                 "username": "3******c",
                 "rateTime": 1469281964000,
                 "rateType": 0,
-                "text": "很喜欢的粥",
+                "text": "很喜歡的粥",
                 "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
             },
             {
@@ -126,7 +126,7 @@
                 "username": "3******c",
                 "rateTime": 1469281964000,
                 "rateType": 1,
-                "text": "没啥味道",
+                "text": "没什麼味道",
                 "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
             },
             {
@@ -182,7 +182,7 @@
             "image": "https://picsum.photos/seed/picsum/750/750"
         },
         {
-            "name": "招牌猪肉白菜锅贴/10个",
+            "name": "招牌猪肉白菜鍋贴/10個",
             "price": 17,
             "oldPrice": "",
             "description": "",
@@ -351,7 +351,7 @@
             "image": "https://picsum.photos/seed/picsum/750/750"
         },
         {
-            "name": "糊椒餅",
+            "name": "胡椒餅",
             "price": 10,
             "oldPrice": "",
             "description": "",
@@ -394,7 +394,7 @@
             "name": "红枣山藥粥套餐",
             "price": 29,
             "oldPrice": 36,
-            "description": "红枣山药糙米粥,素材包,爽口莴笋丝,四川泡菜或八宝酱菜,配菜可备注",
+            "description": "红枣山藥糙米粥,素材包,爽口窩爭絲,四川泡菜或八寶醬菜,配菜可備註",
             "sellCount": 17,
             "rating": 100,
             "info": "",
@@ -429,7 +429,7 @@
                 "username": "3******c",
                 "rateTime": 1469281964000,
                 "rateType": 0,
-                "text": "还可以",
+                "text": "還可以",
                 "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
             },
             {
@@ -446,7 +446,7 @@
         ]
     },
     {
-        "name": "精選热菜",
+        "name": "精選熱菜",
         "type": -1,
         "foods": [
         {
@@ -571,7 +571,7 @@
             "image": "https://picsum.photos/seed/picsum/750/750"
         },
         {
-            "name": "拍黄瓜",
+            "name": "酸黄瓜",
             "price": 9,
             "oldPrice": "",
             "description": "",
@@ -614,7 +614,7 @@
             "name": "红豆薏米粥套餐",
             "price": 37,
             "oldPrice": "",
-            "description": "红豆薏米粥,三鲜干蒸烧卖,拍黄瓜",
+            "description": "红豆薏米粥,三鲜乾蒸燒賣,酸黄瓜",
             "sellCount": 3,
             "rating": 100,
             "info": "",
@@ -715,7 +715,7 @@
                 "username": "3******c",
                 "rateTime": 1469281964000,
                 "rateType": 0,
-                "text": "还可以",
+                "text": "還可以",
                 "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
             },
             {
@@ -782,7 +782,7 @@
                 "username": "3******c",
                 "rateTime": 1469281964000,
                 "rateType": 1,
-                "text": "没啥味道",
+                "text": "没什麼味道",
                 "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
             },
             {
@@ -838,7 +838,7 @@
             "image": "https://picsum.photos/seed/picsum/750/750"
         },
         {
-            "name": "招牌猪肉白菜鍋貼/10个",
+            "name": "招牌猪肉白菜鍋貼/10個",
             "price": 17,
             "oldPrice": "",
             "description": "",
