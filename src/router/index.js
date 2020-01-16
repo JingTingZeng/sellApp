@@ -31,12 +31,14 @@ const router = new VueRouter({
   // scrollBehavior: 
 })
 
-// router.beforeEach((to, from, next) => {
-//   if (to.fullPath === "/"){
-//     next({
-//         path: "/product"
-//     });
-//   }
-// });
+router.beforeEach(async(to, from, next) => {
+  if (to.fullPath === "/"){
+    next({
+        path: "/product"
+    });
+  }else{
+    next();
+  }
+});
 
 export default router
