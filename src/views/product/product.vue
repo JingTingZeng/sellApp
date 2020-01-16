@@ -26,7 +26,7 @@
                                     <span class="product-count">月售{{food.sellCount}}份</span><span>好評率{{food.rating}}％</span>
                                 </div>
                                 <div class="product-price">
-                                    <span class="now">NT$ {{food.price}}</span><span v-show="food.oldPrice" class="old">NT$ {{food.oldPrice}}</span>
+                                    <span class="now">$ {{food.price}}</span><span v-show="food.oldPrice" class="old">NT$ {{food.oldPrice}}</span>
                                 </div>
                             </div>
                         </li>
@@ -34,12 +34,17 @@
                 </li>
             </ul>
         </div>
+        <shopcart v-bind:delivery-price="seller.deliveryPrice" v-bind:min-price="seller.minPrice"/>
     </div>
 </template>
 <script>
 import BScroll from 'better-scroll';
+import shopcart from '@/views/shopCart/shopcart';
 import { mapState,mapActions } from 'vuex';
 export default {
+    components:{
+        shopcart
+    },
     props:{
         seller:{
             type:Object
