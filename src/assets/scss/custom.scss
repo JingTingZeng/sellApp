@@ -5,8 +5,10 @@
 
 @import './mixin/default';
 
+@import './layout/header';
+
 @import './modules/icon';
 @import './modules/star';
 @import './modules/tab';
-@import './modules/header';
 @import './modules/product';
+@import './modules/shopcart';
