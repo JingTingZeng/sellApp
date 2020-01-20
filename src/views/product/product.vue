@@ -28,6 +28,9 @@
                                 <div class="product-price">
                                     <span class="now">$ {{food.price}}</span><span v-show="food.oldPrice" class="old">NT$ {{food.oldPrice}}</span>
                                 </div>
+                                <div class="cartControl-content">
+                                    <cartControl v-bind:product="food"/>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -40,10 +43,12 @@
 <script>
 import BScroll from 'better-scroll';
 import shopcart from '@/views/shopCart/shopcart';
+import cartControl from '@/components/cartControl';
 import { mapState,mapActions } from 'vuex';
 export default {
     components:{
-        shopcart
+        shopcart,
+        cartControl
     },
     props:{
         seller:{
@@ -76,7 +81,8 @@ export default {
                 click:true
             });
             this.productScroll = new BScroll(this.$refs['productWrapper'],{
-                probeType: 3 
+                probeType: 3,
+                click:true 
             });
 
             this.productScroll.on('scroll',(position)=>{

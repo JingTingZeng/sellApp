@@ -91,6 +91,7 @@
 
                 }
                 .product-body{
+                    position: relative;
                     flex: 1;
                 }
                     .product-name{
@@ -126,4 +127,9 @@
                             font-size: 10px;
                             color: rgb(147, 153, 159);
                         }
+                    }
+                    .cartControl-content{
+                        position: absolute;
+                        right: 0;
+                        bottom: -6px;
                     }
