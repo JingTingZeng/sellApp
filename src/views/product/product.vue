@@ -29,7 +29,7 @@
                                     <span class="now">$ {{food.price}}</span><span v-show="food.oldPrice" class="old">NT$ {{food.oldPrice}}</span>
                                 </div>
                                 <div class="cartControl-content">
-                                    <cartControl v-bind:product="food"/>
+                                    <cartControl v-bind:product="food" v-on:cart-add="drop"/>
                                 </div>
                             </div>
                         </li>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
         </div>
-        <shopcart v-bind:delivery-price="seller.deliveryPrice" v-bind:min-price="seller.minPrice"/>
+        <shopcart ref="shopcart" v-bind:select-products="selectedProduct" v-bind:delivery-price="seller.deliveryPrice" v-bind:min-price="seller.minPrice"/>
     </div>
 </template>
 <script>
@@ -72,10 +72,24 @@ export default {
                 }
             }
             return 0;
+        },
+        selectedProduct(){
+            let products = [];
+            this.goods.forEach((item)=>{
+                item.foods.forEach((food)=>{
+                    if(food.count){
+                        products.push(food);
+                    }
+                })
+            })
+            return products;
         }
     },
     methods:{
         ...mapActions(['getGoods']),
+        drop(target){
+            this.$refs.shopcart.drop(target);
+        },
         initScroll(){
             this.menuScroll = new BScroll(this.$refs['menuWrapper'],{
                 click:true
@@ -100,9 +114,9 @@ export default {
             }
         },
         selectMenu(index, event){
-            // if(!event._constructed){
-            //     return;
-            // }
+            if(!event._constructed){
+                return;
+            }
             let productList = this.$refs['productWrapper'].getElementsByClassName('product-list-hook');
             let el= productList[index];
             this.productScroll.scrollToElement(el,300);

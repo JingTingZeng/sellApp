@@ -17,6 +17,13 @@
                 </div>
             </div>
         </div>
+        <div class="ball-content">
+            <transition-group v-on:before-enter="dropBeforeEnter" v-on:enter="dropEnter" v-on:after-enter="dropAfterEnter" name="drop">
+                <div v-for="(ball,n) in balls" v-bind:key="n" v-show="ball.show" class="ball">
+                    <div class="inner inner-hook"></div>
+                </div>
+            </transition-group>
+        </div>
     </div>
 </template>
 
@@ -36,6 +43,28 @@ export default {
         minPrice:{
             type:Number,
             default:0
+        }
+    },
+    data(){
+        return{
+            balls:[
+                {
+                    show: false
+                },
+                // {
+                //     show: false
+                // },
+                // {
+                //     show: false
+                // },
+                // {
+                //     show: false
+                // },
+                // {
+                //     show: false
+                // }
+            ],
+            dropBalls:[]
         }
     },
     computed: {
@@ -70,5 +99,50 @@ export default {
             return 'enough'
         }
     },
+    methods:{
+        drop(element){
+            for(let i=0;i<this.balls.length;i++){
+                let ball = this.balls[i];
+                if(!ball.show){
+                    ball.show = true;
+                    ball.element = element;
+                    this.dropBalls.push(ball);
+                    return;
+                }
+            }
+        },
+        dropBeforeEnter(element){
+            let count = this.balls.length;
+            while(count--){
+                let ball = this.balls[count];
+                if(ball.show){
+                    let rect = ball.element.getBoundingClientRect();
+                    let x = rect.left - 32;
+                    let y = -(window.innerHeight - rect.top -22);
+                    element.style.display = '';
+                    element.style.webkitTransform = `translate3d(0,${y}px,0)`;
+                    element.style.transform = `translate3d(0,${y}px,0)`;
+                    let inner = element.getElementsByClassName('inner-hook')[0];
+                    inner.style.webkitTransform = `translate3d(${x}px,0,0)`;
+                    inner.style.transform = `translate3d(${x}px,0,0)`;
+                }
+            }
+        },
+        dropEnter(element){
+            let rf = element.offsetHeight;
+            element.style.webkitTransform = 'translate3d(0,0,0)';
+            element.style.transform = 'translate3d(0,0,0)';
+            let inner = element.getElementsByClassName('inner-hook')[0];
+            inner.style.webkitTransform = 'translate3d(0,0,0)';
+            inner.style.transform = 'translate3d(0,0,0)';
+        },
+        dropAfterEnter(element){
+            let ball = this.dropBalls.shift();
+            if(ball){
+                ball.show = false;
+                element.style.display = 'none';
+            }
+        }
+    }
 }
 </script>

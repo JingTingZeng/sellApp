@@ -18,14 +18,16 @@ export default {
     },
     methods:{
         increaseCart(){
-            // if(!event._constructed){
-            //     return;
-            // }
+            if(!event._constructed){
+                return;
+            }
             if(!this.product.count){
                 this.$set(this.product,'count',1);
             }else{
                 this.product.count++;
             }
+
+            this.$emit('cart-add', event.target);
         },
         decreaseCart(){
             if(this.product.count){
