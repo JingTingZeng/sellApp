@@ -122,3 +122,80 @@
                 transition: all 0.4s cubic-bezier( 0.49, -0.29, 0.75, 0.41);
             }
         }
+    .shopcart-list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        transition: all 0.5s;
+        transform: translate3d(0,-100%,0);
+        &.fold-enter-active, &.fold-leave-active,&.fold-enter, &.fold-leave-to{
+            transform: translate3d(0,0,0);
+        }
+    }
+        .shopcart-list-header{
+            height: 40px;
+            line-height: 40px;
+            padding: 0 18px;
+            background-color: #f3f5f7;
+            border-bottom: 2px solid rgba($color: $main, $alpha: 0.1);
+        }
+            .shopcart-title{
+                float: left;
+                font-size: 14px;
+                color: $main;
+            }
+            .empty{
+                float: right;
+                font-size: 12px;
+                color: rgb(0,160,220);
+            }
+        .shopcart-list-body{
+            padding: 0 18px;
+            max-height: 217px;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+            .shopcart-list-item{
+                position: relative;
+                padding: 12px 0;
+                box-sizing: border-box;
+                border-bottom: 1px solid rgba($color: $main, $alpha: 0.1);;
+                .name{
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: $main;
+                }
+                .price{
+                    position: absolute;
+                    right: 90px;
+                    bottom: 12px;
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: rgb(240, 20, 20);
+                }
+                .cartControl-content{
+                    position: absolute;
+                    right: 0;
+                    bottom: 6px;
+                }
+            }
+.list-mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    background-color: rgba($color: $main, $alpha: 0.6);
+    backdrop-filter: blur(10px);
+    &.fade-enter-active, &.fade-leave-active {
+        transition: all .5s;
+        opacity: 1;
+    }
+    &.fade-enter, &.fade-leave-to {
+        opacity: 0;
+        background-color: rgba($color: $main, $alpha: 0);
+    }
+}
